@@ -3,7 +3,7 @@ package selenium;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Main {
+public class demoSelenium {
 	
 	public static void main(String[] args) 
 	
