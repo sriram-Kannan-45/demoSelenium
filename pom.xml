@@ -24,7 +24,7 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.6.3</version>
         <configuration>
-          <mainClass>selenium.demoSelenium</mainClass>
+          <mainClass>web_elements.ById</mainClass>
         </configuration>
       </plugin>
     </plugins>
