@@ -24,9 +24,9 @@ public class demoSelenium {
 		
 		System.out.println("System URL : "+url);
 		
-		String page = driver.getPageSource();
+//		String page = driver.getPageSource();
 		
-		System.out.println(page +"\npage "+page.length());
+//		System.out.println(page +"\npage "+page.length());
 		
 //		driver.close();
 	}
