@@ -23,10 +23,9 @@ public class ActionDemo4 {
 
 		WebElement ele_1 = driver.findElement(By.id("form:conpnl_content"));
 		
-		act.dragAndDropBy(ele_1, 70, 0).perform();
+//		act.dragAndDropBy(ele_1, 70, 0).perform();
 		
-		
-
+		act.clickAndHold(ele_1).moveByOffset(70,0).release().build().perform();
 		
 	}
 

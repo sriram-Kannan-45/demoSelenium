@@ -23,8 +23,9 @@ public class ActionsDemo3 {
 
 		WebElement ele_2 = driver.findElement(By.xpath("//div[@id=\"form:drop_content\"]"));
 		
-		act.dragAndDrop(ele_1, ele_2).perform();
+//		act.dragAndDrop(ele_1, ele_2).perform();
 		
+		act.clickAndHold(ele_1).moveToElement(ele_2).release().build().perform();
 
 	}
 
