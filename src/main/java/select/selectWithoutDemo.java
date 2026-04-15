@@ -20,32 +20,27 @@ public class selectWithoutDemo {
 		
 		driver.get("https://www.leafground.com/select.xhtml");
 		
-		WebElement ser = driver.findElement(By.xpath("//input[@id=\"j_idt87:auto"
-				+ "-complete_input\"]"));
-		ser.sendKeys("Selenium WebDriver");
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		
-		List<WebElement> options = wait.until(ExpectedConditions.
-				visibilityOfAllElementsLocatedBy
-				(By.xpath("//*[@id=\"j_idt87:auto-complete_panel\"]/ul")));
+		WebElement dropDown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class=\"ui-autocomplete-dropdown ui-button ui-widget ui-state-default ui-corner-right ui-button-icon-only\"]")));
 		
-		for(WebElement ob : options)
-		{
-			for (WebElement ob1 : ob.findElements(By.tagName("li"))) 
-			
-			{
-				if (ob1.getText().equals("AWS") || ob1.getText().equals
-						("Selenium WebDriver") || ob1.getText().equals("Appium"))
-				{
-					ob1.click();
-					
-				}
-				
-				
-			}
-		}
+		dropDown.click();
 		
-		
-	}
+		List<WebElement> options = wait.until(
+			    ExpectedConditions.visibilityOfAllElementsLocatedBy(
+			        By.xpath("//span[@id=\"j_idt87:auto-complete_panel\"]/ul")
+			    )
+			);
 
+		for (WebElement option : options) 
+		{
+            for(WebElement item : option.findElements(By.tagName("li"))  ) {
+                if (item.getText().equals("Selenium WebDriver")  || item.getText().equals("Appium") || item.getText().equals("Playwright") ) {
+                    item.click();
+                    
+                }
+            }
+			
+		}
+	}
 }

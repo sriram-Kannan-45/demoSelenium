@@ -35,13 +35,6 @@ public class GoogleDemo
 		js.executeScript("document.getElementsByName('name')[0].value='sriram';");
 		
 		js.executeScript("document.getElementsByName('name')[1].value='kannan';");
-		
-		
-
-		
-		
-		
-		
 
 	}
 

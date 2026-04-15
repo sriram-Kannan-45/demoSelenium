@@ -37,7 +37,7 @@ public class demoLocators
 			    By.xpath("//button[normalize-space()='Register']")
 			);
 
-			WebElement clr = driver.findElement(
+		WebElement clr = driver.findElement(
 			    with(By.className("btn")).toRightOf(reg)
 			);
 
